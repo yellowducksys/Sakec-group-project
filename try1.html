@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SDG 15 Multi-Page Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* Basic reset */
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+}
+
+/* Top navigation bar */
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(0, 0, 0, 0.6);
+padding: 15px;
+text-align: center;
+z-index: 100;
+}
+
+nav button {
+background: none;
+color: white;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+font-size: 16px;
+margin: 0 5px;
+}
+
+nav button:hover {
+background: rgba(255, 255, 255, 0.2);
+border-radius: 5px;
+}
+
+/* Hide all pages by default */
+.page {
+display: none;
+min-height: 100vh;
+}
+/* Show only active page */
+.active {
+display: block;
+}
+
+/* Page background styling */
+.page {
+background: white;
+}
+
+/* Content card styling */
+.card {
+background: white;
+padding: 30px;
+margin: 100px auto 20px auto;
+max-width: 1000px;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+color: #2f7a4f;
+}
+
+/* Images inside cards */
+img {
+width: 100%;
+border-radius: 8px;
+margin: 15px 0;
+}
+
+/* Home page hero section */
+.hero {
+height: 100vh;
+background-image: url('https://pplx-res.cloudinary.com/image/upload/v1763118781/search_images/25de11f1c451ef973f1d1a1645c2b8af616c88d4.jpg');
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+}
+.hero h1 {
+font-size: 48px;
+margin-bottom: 15px;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+.hero p {
+font-size: 20px;
+margin-bottom: 25px;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Button styles */
+.btn {
+background: #3bb381;
+color: white;
+padding: 12px 25px;
+border: none;
+border-radius: 25px;
+cursor: pointer;
+font-size: 16px;
+margin: 5px;
+}
+.btn:hover {
+background: #2f9969;
+}
+
+.btn2 {
+background: transparent;
+color: white;
+padding: 12px 25px;
+border: 2px solid white;
+border-radius: 25px;
+cursor: pointer;
+font-size: 16px;
+margin: 5px;
+}
+.btn2:hover {
+background: rgba(255, 255, 255, 0.2);
+}
+
+/* Background images for other pages */
+
+</style>
+
+</head>
+<body>
+
+<nav>
+<button onclick="openPage('home')">Home</button>
+<button onclick="openPage('about')">About</button>
+<button onclick="openPage('biodiversity')">Threats</button>
+<button onclick="openPage('actions')">Act</button>
+<button onclick="openPage('global')">Targets</button>
+<button onclick="openPage('learn')">Resources</button>
+<button onclick="openPage('feedback')">Feedback</button>
+</nav>
+
+<div id="home" class="page active">
+<section class="hero">
+<h1>Forests Worth More Living Than Cut</h1>
+<p>Fair trade. Sustainable jobs. Protected land.</p>
+
+<div>
+<button class="btn" onclick="openPage('about')">Learn More</button>
+<button class="btn2" onclick="openPage('actions')">Take Action</button>
+</div>
+</section>
+</div>
+
+<div id="about" class="page">
+<div class="card">
+<h1>About SDG 15 – Life on Land</h1>
+<p>
+SDG 15 aims to protect, restore and promote sustainable use of terrestrial ecosystems.
+It focuses on forests, land, soil, biodiversity, and wildlife preservation.
+</p>
+
+<h2>Why SDG 15 is Important</h2>
+<p>
+Land ecosystems provide food, water, oxygen, medicines, building materials and carbon absorption.
+Without forests and biodiversity, life on Earth becomes unstable.
+</p>
+
+<img src="https://mediagoumbook.s3.eu-north-1.amazonaws.com/wp-content/uploads/2020/10/07154635/SDG-15-grande-en-1024x484.jpg" alt="SDG 15 Life on Land infographic">
+
+<h2>Key Targets of SDG 15</h2>
+<ul>
+<li>Restore degraded forests and drylands</li>
+<li>Improve land productivity</li>
+<li>Protect mountains and freshwater ecosystems</li>
+<li>Reduce poaching and eliminate illegal wildlife trade</li>
+<li>Increase global conservation funding</li>
+</ul>
+
+<h2>Facts</h2>
+<ul>
+<li>Over 75% of land is degraded globally.</li>
+<li>Forests absorb 2 billion tons of CO₂ annually.</li>
+<li>12 million hectares of land are lost every year due to deforestation.</li>
+</ul>
+</div>
+</div>
+
+<div id="biodiversity" class="page">
+<div class="card">
+<h1>Biodiversity & Threats</h1>
+<p>
+Biodiversity refers to the variety of life on Earth. Healthy ecosystems depend on diverse species to function properly.
+</p>
+
+<img src="https://nbs.net/wp-content/uploads/2022/02/5-Threats-Biodiversity.jpeg" alt="Main threats to biodiversity diagram">
+
+<h2>Main Threats to Biodiversity</h2>
+<ul>
+<li><strong>Deforestation:</strong> Clearing forests for agriculture and construction.</li>
+<li><strong>Pollution:</strong> Air, water, and soil pollution destroy habitats.</li>
+<li><strong>Climate Change:</strong> Rising temperatures disrupt ecosystems.</li>
+<li><strong>Poaching:</strong> Illegal hunting and wildlife trade.</li>
+<li><strong>Habitat Fragmentation:</strong> Roads, buildings split animal habitats.</li>
+</ul>
+
+<h2>Impact of Biodiversity Loss</h2>
+<ul>
+<li>Loss of medicinal plants and raw materials</li>
+<li>Increase in natural disasters</li>
+<li>Reduction of pollinators → food shortage</li>
+<li>Soil erosion and land degradation</li>
+</ul>
+</div>
+</div>
+
+<div id="actions" class="page">
+<div class="card">
+<h1>What You Can Do</h1>
+
+<img src="https://cdn.shopify.com/s/files/1/0035/9468/2435/files/How_to_Stop_Deforestation_in_4_Ways-IP2.jpg?v=1664198079" alt="How to stop deforestation guide">
+
+<h2>Individual Actions</h2>
+<ul>
+<li>Use less paper &amp; go digital</li>
+<li>Plant trees in your community</li>
+<li>Reduce plastic waste</li>
+<li>Support eco-friendly brands</li>
+<li>Buy Forest-Safe certified products</li>
+</ul>
+
+<h2>Community Actions</h2>
+<ul>
+<li>Start a neighborhood clean-up program</li>
+<li>Educate children about wildlife</li>
+<li>Create urban gardens and green spaces</li>
+</ul>
+
+<h2>Government & Policy Support</h2>
+<ul>
+<li>Support conservation laws</li>
+<li>Participate in environmental campaigns</li>
+<li>Advocate for renewable energy</li>
+</ul>
+</div>
+</div>
+
+<div id="global" class="page">
+<div class="card">
+<h1>Global Efforts to Protect Land & Forests</h1>
+
+<img src="https://conbio.org/images/content_policy/BialowiezaForest_SCBPolicyCommitteeEurope.jpg" alt="Białowieża Forest conservation">
+
+<h2>Major International Programs</h2>
+<ul>
+<li><strong>UN REDD+ Program:</strong> Reducing emissions from deforestation.</li>
+<li><strong>UN Convention on Biological Diversity:</strong> Global preservation of species.</li>
+<li><strong>IUCN Red List:</strong> Tracks endangered species worldwide.</li>
+<li><strong>Global Forest Watch:</strong> Tracks forest loss using satellites.</li>
+</ul>
+
+<h2>Success Stories</h2>
+<ul>
+<li>India increased tiger population by 30% in 4 years.</li>
+<li>Costa Rica restored 50% of its forests through policy reforms.</li>
+<li>China planted the largest manmade forest to fight desertification.</li>
+</ul>
+
+<h2>Challenges</h2>
+<ul>
+<li>Lack of funding</li>
+<li>Weak enforcement of laws</li>
+<li>Poverty-driven habitat destruction</li>
+</ul>
+</div>
+</div>
+
+<div id="learn" class="page">
+<div class="card">
+<h1>Learn More</h1>
+<p>Explore research, organizations, and global institutions working toward SDG 15.</p>
+
+<h2>Trusted Resources</h2>
+<ul>
+<li><a href="https://sdgs.un.org/goals/goal15" target="_blank">UN SDG 15 (Official)</a></li>
+<li><a href="https://www.worldwildlife.org/" target="_blank">World Wildlife Fund (WWF)</a></li>
+<li><a href="https://www.iucn.org/" target="_blank">International Union for Conservation of Nature</a></li>
+<li><a href="https://www.unep.org" target="_blank">United Nations Environment Programme</a></li>
+<li><a href="https://globalforestwatch.org/" target="_blank">Global Forest Watch</a></li>
+</ul>
+
+<h2>Recommended Videos</h2>
+<ul>
+<li>YouTube – SDG 15 Explained</li>
+<li>National Geographic – Forest Conservation</li>
+<li>UNEP – Sustainable Land Management</li>
+</ul>
+</div>
+</div>
+
+<div id="feedback" class="page">
+<div class="card">
+<h1>Feedback Form</h1>
+<p>We value your feedback! Please share your thoughts on our SDG 15 website to help us improve.</p>
+
+<form id="feedbackForm" style="margin-top: 30px;">
+<div style="margin-bottom: 20px;">
+<label for="name" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2f7a4f;">Name:</label>
+<input type="text" id="name" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px;">
+</div>
+
+<div style="margin-bottom: 20px;">
+<label for="email" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2f7a4f;">Email:</label>
+<input type="email" id="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px;">
+</div>
+
+<div style="margin-bottom: 20px;">
+<label for="rating" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2f7a4f;">Rating (1-5):</label>
+<select id="rating" name="rating" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px;">
+<option value="">Select a rating</option>
+<option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+<option value="4">⭐⭐⭐⭐ Very Good</option>
+<option value="3">⭐⭐⭐ Good</option>
+<option value="2">⭐⭐ Fair</option>
+<option value="1">⭐ Poor</option>
+</select>
+</div>
+
+<div style="margin-bottom: 20px;">
+<label for="comments" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2f7a4f;">Comments:</label>
+<textarea id="comments" name="comments" rows="5" placeholder="Tell us what you liked or how we can improve..." style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 15px; resize: vertical;"></textarea>
+</div>
+
+<button type="submit" class="btn" style="width: 100%; padding: 15px; font-size: 18px;">Submit Feedback</button>
+</form>
+
+<div id="successMessage" style="display: none; margin-top: 20px; padding: 20px; background: #d4edda; border: 2px solid #3bb381; border-radius: 8px; color: #155724; font-weight: 600;">
+✅ Thank you for your feedback! Your response has been recorded.
+</div>
+
+<div style="margin-top: 40px;">
+<h2>Recent Feedback</h2>
+<div id="feedbackList" style="margin-top: 20px;">
+<p style="color: #999; font-style: italic;">No feedback yet. Be the first to share your thoughts!</p>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+// Array to store all feedback
+var feedbackData = [];
+
+// Function to switch between pages
+function openPage(page) {
+// Hide all pages
+var allPages = document.querySelectorAll('.page');
+for (var i = 0; i < allPages.length; i++) {
+allPages[i].classList.remove('active');
+}
+// Show selected page
+document.getElementById(page).classList.add('active');
+window.scrollTo(0, 0);
+}
+
+// Wait for page to load
+window.onload = function() {
+var form = document.getElementById('feedbackForm');
+var successMessage = document.getElementById('successMessage');
+var feedbackList = document.getElementById('feedbackList');
+
+// When form is submitted
+form.onsubmit = function(e) {
+e.preventDefault();
+
+// Get values from form
+var name = document.getElementById('name').value;
+var email = document.getElementById('email').value;
+var rating = document.getElementById('rating').value;
+var comments = document.getElementById('comments').value;
+var date = new Date().toLocaleDateString();
+var time = new Date().toLocaleTimeString();
+
+// Create feedback object
+var feedback = {
+name: name,
+email: email,
+rating: rating,
+comments: comments,
+date: date,
+time: time
+};
+
+// Add to array
+feedbackData.push(feedback);
+
+// Show success message
+successMessage.style.display = 'block';
+setTimeout(function() {
+successMessage.style.display = 'none';
+}, 5000);
+
+// Clear form
+form.reset();
+
+// Update feedback display
+showFeedback();
+};
+
+// Function to display all feedback
+function showFeedback() {
+if (feedbackData.length === 0) {
+feedbackList.innerHTML = '<p style="color: #999;">No feedback yet. Be the first to share your thoughts!</p>';
+return;
+}
+
+var html = '';
+// Show newest first
+for (var i = feedbackData.length - 1; i >= 0; i--) {
+var item = feedbackData[i];
+var stars = '';
+for (var j = 0; j < parseInt(item.rating); j++) {
+stars += '⭐';
+}
+html += '<div style="border: 2px solid #3bb381; padding: 20px; margin-bottom: 15px; border-radius: 8px; background: white;">';
+html += '<h3 style="margin-top: 0; color: #2f7a4f;">' + item.name + '</h3>';
+html += '<p style="color: #ffa500; font-size: 20px; margin: 5px 0;">' + stars + '</p>';
+html += '<p style="color: #666; font-size: 14px;">' + item.email + ' • ' + item.date + ' ' + item.time + '</p>';
+if (item.comments) {
+html += '<p style="margin-top: 10px;">' + item.comments + '</p>';
+}
+html += '</div>';
+}
+
+feedbackList.innerHTML = html;
+}
+
+// Show feedback on page load
+showFeedback();
+};
+</script>
+
+</body>
+</html>
