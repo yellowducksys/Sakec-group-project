@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SDG 15 Multi-Page Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      background: #f2f7f2;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.4);
+      padding: 12px;
+      text-align: center;
+      z-index: 100;
+    }
+
+    nav button {
+      background: white;
+      color: #2f7a4f;
+      padding: 10px 15px;
+      border-radius: 20px;
+      border: none;
+      margin: 0 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background: #e3ffe3;
+    }
+
+    .page {
+      display: none;
+      width: 100%;
+      padding: 90px 20px;
+      animation: fadeIn .3s ease-in-out;
+      border: 2px solid #2f7a4f;
+      border-radius: 12px;
+      margin: 10px;
+    }
+    .active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    h1, h2 {
+      color: #2f7a4f;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+
+    .hero {
+      height: 100vh;
+      background-image: url('https://pplx-res.cloudinary.com/image/upload/v1763118781/search_images/25de11f1c451ef973f1d1a1645c2b8af616c88d4.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .btn {
+      background: #3bb381;
+      padding: 12px 20px;
+      border-radius: 20px;
+      color: white;
+      border: none;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn2 {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+  </style>
+
+<script>
+    const pages = [
+      { id: "home", title: "Home" },
+      { id: "about", title: "About SDG" },
+      { id: "biodiversity", title: "Biodiversity" },
+      { id: "actions", title: "Actions" },
+      { id: "global", title: "Global Efforts" },
+      { id: "learn", title: "Learn More" },
+      { id: "review", title: "Review" }
+    ];
+
+    function openPage(page) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(page).classList.add('active');
+      window.scrollTo(0, 0);
+    }
+
+</script>
+
+</head>
+<body>
+
+<nav>
+  <button onclick="openPage('home')">Home</button>
+  <button onclick="openPage('about')">About SDG</button>
+  <button onclick="openPage('biodiversity')">Biodiversity</button>
+  <button onclick="openPage('actions')">Actions</button>
+  <button onclick="openPage('global')">Global Efforts</button>
+  <button onclick="openPage('learn')">Learn More</button>
+  <button onclick="openPage('review')">Review</button>
+</nav>
+
+<div id="home" class="page active">
+  <section class="hero">
+    <h1>Forests Worth More Living Than Cut</h1>
+    <p>Fair trade. Sustainable jobs. Protected land.</p>
+
+    <div>
+      <button class="btn" onclick="openPage('about')">Learn More</button>
+      <button class="btn2" onclick="openPage('actions')">Take Action</button>
+    </div>
+  </section>
+</div>
+
+<div id="about" class="page">
+  <div class="card">
+    <h1>About SDG 15 – Life on Land</h1>
+    <p>
+      SDG 15 aims to protect, restore and promote sustainable use of terrestrial ecosystems.  
+      It focuses on forests, land, soil, biodiversity, and wildlife preservation.
+    </p>
+
+    <h2>Why SDG 15 is Important</h2>
+    <p>
+      Land ecosystems provide food, water, oxygen, medicines, building materials and carbon absorption.  
+      Without forests and biodiversity, life on Earth becomes unstable.
+    </p>
+
+    <img src="https://mediagoumbook.s3.eu-north-1.amazonaws.com/wp-content/uploads/2020/10/07154635/SDG-15-grande-en-1024x484.jpg">
+
+    <h2>Key Targets of SDG 15</h2>
+    <ul>
+      <li>Restore degraded forests and drylands</li>
+      <li>Improve land productivity</li>
+      <li>Protect mountains and freshwater ecosystems</li>
+      <li>Reduce poaching and eliminate illegal wildlife trade</li>
+      <li>Increase global conservation funding</li>
+    </ul>
+
+    <h2>Facts</h2>
+    <ul>
+      <li>Over 75% of land is degraded globally.</li>
+      <li>Forests absorb 2 billion tons of CO₂ annually.</li>
+      <li>12 million hectares of land are lost every year due to deforestation.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="biodiversity" class="page">
+  <div class="card">
+    <h1>Biodiversity & Threats</h1>
+    <p>
+      Biodiversity refers to the variety of life on Earth. Healthy ecosystems depend on diverse species to function properly.
+    </p>
+
+    <img src="https://nbs.net/wp-content/uploads/2022/02/5-Threats-Biodiversity.jpeg">
+
+    <h2>Main Threats to Biodiversity</h2>
+    <ul>
+      <li><strong>Deforestation:</strong> Clearing forests for agriculture and construction.</li>
+      <li><strong>Pollution:</strong> Air, water, and soil pollution destroy habitats.</li>
+      <li><strong>Climate Change:</strong> Rising temperatures disrupt ecosystems.</li>
+      <li><strong>Poaching:</strong> Illegal hunting and wildlife trade.</li>
+      <li><strong>Habitat Fragmentation:</strong> Roads, buildings split animal habitats.</li>
+    </ul>
+
+    <h2>Impact of Biodiversity Loss</h2>
+    <ul>
+      <li>Loss of medicinal plants and raw materials</li>
+      <li>Increase in natural disasters</li>
+      <li>Reduction of pollinators → food shortage</li>
+      <li>Soil erosion and land degradation</li>
+    </ul>
+  </div>
+</div>
+
+<div id="actions" class="page">
+  <div class="card">
+    <h1>What You Can Do</h1>
+
+    <img src="https://cdn.shopify.com/s/files/1/0035/9468/2435/files/How_to_Stop_Deforestation_in_4_Ways-IP2.jpg?v=1664198079">
+
+    <h2>Individual Actions</h2>
+    <ul>
+      <li>Use less paper & go digital</li>
+      <li>Plant trees in your community</li>
+      <li>Reduce plastic waste</li>
+      <li>Support eco-friendly brands</li>
+      <li>Buy Forest-Safe certified products</li>
+    </ul>
+
+    <h2>Community Actions</h2>
+    <ul>
+      <li>Start a neighborhood clean-up program</li>
+      <li>Educate children about wildlife</li>
+      <li>Create urban gardens and green spaces</li>
+    </ul>
+
+    <h2>Government & Policy Support</h2>
+    <ul>
+      <li>Support conservation laws</li>
+      <li>Participate in environmental campaigns</li>
+      <li>Advocate for renewable energy</li>
+    </ul>
+  </div>
+</div>
+
+<div id="global" class="page">
+  <div class="card">
+    <h1>Global Efforts to Protect Land & Forests</h1>
+
+    <img src="https://conbio.org/images/content_policy/BialowiezaForest_SCBPolicyCommitteeEurope.jpg">
+
+    <h2>Major International Programs</h2>
+    <ul>
+      <li><strong>UN REDD+ Program:</strong> Reducing emissions from deforestation.</li>
+      <li><strong>UN Convention on Biological Diversity:</strong> Global preservation of species.</li>
+      <li><strong>IUCN Red List:</strong> Tracks endangered species worldwide.</li>
+      <li><strong>Global Forest Watch:</strong> Tracks forest loss using satellites.</li>
+    </ul>
+
+    <h2>Success Stories</h2>
+    <ul>
+      <li>India increased tiger population by 30% in 4 years.</li>
+      <li>Costa Rica restored 50% of its forests through policy reforms.</li>
+      <li>China planted the largest manmade forest to fight desertification.</li>
+    </ul>
+
+    <h2>Challenges</h2>
+    <ul>
+      <li>Lack of funding</li>
+      <li>Weak enforcement of laws</li>
+      <li>Poverty-driven habitat destruction</li>
+    </ul>
+  </div>
+</div>
+
+<div id="learn" class="page">
+  <div class="card">
+    <h1>Learn More</h1>
+    <p>Explore research, organizations, and global institutions working toward SDG 15.</p>
+
+    <h2>Trusted Resources</h2>
+    <ul>
+      <li><a href="https://sdgs.un.org/goals/goal15" target="_blank">UN SDG 15 (Official)</a></li>
+      <li><a href="https://www.worldwildlife.org/" target="_blank">World Wildlife Fund (WWF)</a></li>
+      <li><a href="https://www.iucn.org/" target="_blank">International Union for Conservation of Nature</a></li>
+      <li><a href="https://www.unep.org" target="_blank">United Nations Environment Programme</a></li>
+      <li><a href="https://globalforestwatch.org/" target="_blank">Global Forest Watch</a></li>
+    </ul>
+
+    <h2>Recommended Videos</h2>
+    <ul>
+      <li>YouTube – SDG 15 Explained</li>
+      <li>National Geographic – Forest Conservation</li>
+      <li>UNEP – Sustainable Land Management</li>
+    </ul>
+  </div>
+</div>
+
+<div id="review" class="page">
+  <div class="card">
+    <h1>Review Our Website</h1>
+    <p>We value your feedback! Please share your thoughts on our SDG 15 website to help us improve.</p>
+
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="rating">Rating (1-5):</label><br>
+      <select id="rating" name="rating" required>
+        <option value="">Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select><br><br>
+
+      <label for="comments">Comments:</label><br>
+      <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Tell us what you liked or how we can improve..."></textarea><br><br>
+
+      <button type="submit" class="btn">Submit Review</button>
+    </form>
+
+    <h2>Recent Reviews</h2>
+    <div id="reviews-list">
+      <!-- Placeholder for dynamic reviews; in a real site, this would be populated from a backend -->
+      <p>No reviews yet. Be the first to leave one!</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
